@@ -65,7 +65,6 @@
     #media-session.enable = true;
   };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.takumi = {
     isNormalUser = true;
     description = "Takumi Ando";
@@ -115,6 +114,9 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tailscale-qs
     gnomeExtensions.kimpanel
+
+    # Nix utils
+    home-manager
   ];
 
   # Nix settings
