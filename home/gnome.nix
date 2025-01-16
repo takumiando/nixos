@@ -14,6 +14,10 @@ with lib.hm.gvariant;
       xkb-options = [ "terminate:ctrl_alt_bksp" ];
     };
 
+    "org/gnome/mutter" = {
+      dynamic-workspaces = true;
+    };
+
     "org/gnome/settings-daemon/plugins/color" = {
       night-light-schedule-automatic = false;
     };
