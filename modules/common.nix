@@ -120,6 +120,7 @@
     distrobox
     minicom
     shellcheck
+    imagemagick
 
     # Terminal
     ghostty
