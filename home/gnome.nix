@@ -4,6 +4,10 @@ with lib.hm.gvariant;
 
 {
   dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      clock-show-seconds = true;
+    };
+
     "org/gnome/desktop/input-sources" = {
       mru-sources = [ (mkTuple [ "xkb" "us" ]) ];
       sources = [ (mkTuple [ "xkb" "us" ]) ];
