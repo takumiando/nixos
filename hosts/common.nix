@@ -33,6 +33,17 @@
       fcitx5.addons = [ pkgs.fcitx5-mozc ];
   };
 
+  # Japanese fonts
+  fonts = {
+    fonts = with pkgs; [
+      noto-fonts-cjk-serif
+      noto-fonts-cjk-sans
+      noto-fonts-emoji
+      nerdfonts
+    ];
+    fontDir.enable = true;
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
