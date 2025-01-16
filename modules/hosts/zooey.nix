@@ -7,4 +7,7 @@
     ];
 
   networking.hostName = "zooey";
+
+  # Enable fingerprint reader
+  services.fprintd.enable = true;
 }
