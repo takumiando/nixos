@@ -110,6 +110,9 @@
     };
   };
 
+  # Enable fwupd
+  services.fwupd.enable = true;
+
   # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
