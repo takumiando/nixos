@@ -11,7 +11,10 @@ with lib.hm.gvariant;
     "org/gnome/desktop/input-sources" = {
       mru-sources = [ (mkTuple [ "xkb" "us" ]) ];
       sources = [ (mkTuple [ "xkb" "us" ]) ];
-      xkb-options = [ "terminate:ctrl_alt_bksp" ];
+      xkb-options = [
+        "terminate:ctrl_alt_bksp"
+        "caps:ctrl_modifier"
+      ];
     };
 
     "org/gnome/mutter" = {
