@@ -15,8 +15,8 @@
       ramona = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/common.nix
-          ./hosts/ramona.nix
+          ./modules/common.nix
+          ./modules/hosts/ramona.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -27,8 +27,8 @@
       hazzard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/common.nix
-          ./hosts/hazzard.nix
+          ./modules/common.nix
+          ./modules/hosts/hazzard.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -39,8 +39,8 @@
       vm = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/common.nix
-          ./hosts/vm.nix
+          ./modules/common.nix
+          ./modules/hosts/vm.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
