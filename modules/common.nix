@@ -76,6 +76,7 @@
     #media-session.enable = true;
   };
 
+  # User
   users.users.takumi = {
     isNormalUser = true;
     description = "Takumi Ando";
