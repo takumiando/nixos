@@ -11,4 +11,4 @@ if [ -f ./modules/hosts/"$HOST".nix ]; then
     sudo nixos-rebuild switch --flake .#"$HOST"
 fi
 
-home-manager switch --flake .#takumi
+home-manager switch --extra-experimental-features nix-command --flake .#takumi
