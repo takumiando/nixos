@@ -108,6 +108,13 @@
     vivaldi
     spotify
     discord
+
+    # GNOME utils and extensions
+    gnome-tweaks
+    dconf2nix
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.tailscale-qs
+    gnomeExtensions.kimpanel
   ];
 
   # Nix settings
