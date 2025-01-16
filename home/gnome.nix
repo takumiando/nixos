@@ -6,6 +6,7 @@ with lib.hm.gvariant;
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       clock-show-seconds = true;
+      show-battery-percentage = true;
     };
 
     "org/gnome/desktop/input-sources" = {
