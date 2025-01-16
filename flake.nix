@@ -26,6 +26,19 @@
         ];
       };
 
+      zooey = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./modules/common.nix
+          ./modules/hosts/zooey.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+          }
+          nixos-hardware.nixosModules.lenovo-thinkpad-x280
+        ];
+      };
+
       hazzard = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
