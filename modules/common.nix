@@ -109,7 +109,7 @@
     };
   };
 
-  # Apps
+  # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
     vim
@@ -130,6 +130,10 @@
 
     # Sound effector
     easyeffects
+
+    # Hardware utils
+    usbutils
+    pciutils
 
     # Non-free apps
     vivaldi
