@@ -2,14 +2,15 @@
   description = "takumiando's machines";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-24.11";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     home-manager = {
-      url = "github:nix-community/home-manager?ref=release-24.11";
+      url = "github:nix-community/home-manager/release-24.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = { self, nixpkgs, home-manager }: {
+  outputs = { self, nixpkgs, home-manager, nixos-hardware }: {
     nixosConfigurations = {
 
       ramona = nixpkgs.lib.nixosSystem {
@@ -21,6 +22,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
           }
+          nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4
         ];
       };
 
@@ -33,6 +35,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
           }
+          nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5
         ];
       };
 
