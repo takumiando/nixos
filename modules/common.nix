@@ -117,6 +117,7 @@
 
     # Terminal
     ghostty
+    kitty
 
     # Media player
     mpv
