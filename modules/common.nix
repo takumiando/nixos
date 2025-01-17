@@ -79,7 +79,11 @@
   users.users.takumi = {
     isNormalUser = true;
     description = "Takumi Ando";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "wheel"
+      "dialout"
+      "networkmanager"
+    ];
     shell = pkgs.zsh;
   };
 
