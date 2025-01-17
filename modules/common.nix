@@ -114,6 +114,7 @@
     fzf
     silver-searcher
     distrobox
+    minicom
 
     # Terminal
     ghostty
