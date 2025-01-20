@@ -119,6 +119,7 @@
     silver-searcher
     distrobox
     minicom
+    shellcheck
 
     # Terminal
     ghostty
