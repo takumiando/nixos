@@ -127,6 +127,9 @@
     shellcheck
     imagemagick
 
+    # Programming
+    python3
+
     # Terminal
     ghostty
     kitty
