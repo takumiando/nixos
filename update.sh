@@ -2,13 +2,18 @@
 
 cd "$(dirname "$0")" || exit 1
 
+
 HOST="$(hostname)"
 if [ -n "$1" ]; then
     HOST="$1"
 fi
 
-if [ -f ./modules/hosts/"$HOST".nix ]; then
-    sudo nixos-rebuild switch --flake .#"$HOST"
+nix flake update
+
+if [ -n "$(git diff -- flake.lock)" ]; then
+    DATETIME="$(date -s '+%Y-%m-%d %H:%M:%S')"
+    git add flake.lock
+    git commit --signoff -m "flake.lock: Update $DATETIME"
 fi
 
-home-manager switch --extra-experimental-features nix-command --flake .#takumi
+./apply.sh "$HOST"
