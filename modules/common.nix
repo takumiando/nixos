@@ -119,6 +119,7 @@
     vim
     tmux
     git
+    htop
     fzf
     silver-searcher
     distrobox
