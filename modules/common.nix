@@ -126,6 +126,7 @@
     minicom
     shellcheck
     imagemagick
+    yt-dlp
 
     # Programming
     python3
