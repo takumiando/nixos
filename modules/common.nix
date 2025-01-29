@@ -50,6 +50,13 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+  services.gnome.gnome-keyring.enable = true;
+
+  # Enable Sway WM
+  programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -156,6 +163,10 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tailscale-qs
     gnomeExtensions.kimpanel
+
+    # For Sway
+    wob
+    rofi
 
     # Nix utils
     home-manager
