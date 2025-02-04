@@ -169,6 +169,7 @@
     wob
     rofi
     slurp
+    dunst
 
     # Nix utils
     home-manager
