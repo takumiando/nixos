@@ -167,6 +167,7 @@
     # For Sway
     wob
     rofi
+    slurp
 
     # Nix utils
     home-manager
