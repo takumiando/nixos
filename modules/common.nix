@@ -134,6 +134,7 @@
     shellcheck
     imagemagick
     yt-dlp
+    pfetch
 
     # Programming
     python3
