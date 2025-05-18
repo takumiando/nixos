@@ -127,6 +127,7 @@
     shellcheck
     imagemagick
     yt-dlp
+    transmission_4-gtk
 
     # Programming
     python3
