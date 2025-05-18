@@ -29,8 +29,12 @@ with lib.hm.gvariant;
       switch-to-workspace-4 = [ "<Super>4" ];
     };
 
+    "org/gnome/desktop/wm/preferences" = {
+      num-workspaces = 4;
+    };
+
     "org/gnome/mutter" = {
-      dynamic-workspaces = true;
+      dynamic-workspaces = false;
     };
 
     "org/gnome/settings-daemon/plugins/color" = {
