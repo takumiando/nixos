@@ -140,6 +140,7 @@
     # Multimedia
     ffmpeg
     mpv
+    gimp
 
     # Sound effector
     easyeffects
