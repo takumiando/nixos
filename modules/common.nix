@@ -128,6 +128,7 @@
     imagemagick
     yt-dlp
     transmission_4-gtk
+    distrobox
 
     # Programming
     python3
