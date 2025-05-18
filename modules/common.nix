@@ -137,7 +137,8 @@
     ghostty
     kitty
 
-    # Media player
+    # Multimedia
+    ffmpeg
     mpv
 
     # Sound effector
