@@ -11,7 +11,7 @@ fi
 nix flake update
 
 if [ -n "$(git diff -- flake.lock)" ]; then
-    DATETIME="$(date -s '+%Y-%m-%d %H:%M:%S')"
+    DATETIME="$(date '+%Y-%m-%d %H:%M:%S')"
     git add flake.lock
     git commit --signoff -m "flake.lock: Update $DATETIME"
 fi
