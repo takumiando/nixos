@@ -153,6 +153,7 @@
     vivaldi
     spotify
     discord
+    steam
 
     # GNOME utils and extensions
     gnome-tweaks
