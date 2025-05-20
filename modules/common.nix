@@ -39,7 +39,7 @@
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-emoji
-      nerdfonts
+      nerd-fonts.jetbrains-mono
     ];
     fontDir.enable = true;
   };
@@ -61,7 +61,7 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -173,5 +173,5 @@
     };
   };
 
-  system.stateVersion = "24.11";
+  system.stateVersion = "25.05";
 }
