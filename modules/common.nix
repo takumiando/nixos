@@ -121,6 +121,7 @@
     git
     htop
     fzf
+    bc
     silver-searcher
     distrobox
     minicom
