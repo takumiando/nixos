@@ -130,6 +130,7 @@
     yt-dlp
     transmission_4-gtk
     distrobox
+    starship
 
     # Programming
     python3
