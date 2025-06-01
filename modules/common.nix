@@ -126,6 +126,7 @@
     htop
     fzf
     bc
+    xsel
     silver-searcher
     distrobox
     minicom
