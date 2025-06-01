@@ -116,6 +116,9 @@
   # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
+    binutils
+    gnumake
+    gcc
     vim
     tmux
     git
