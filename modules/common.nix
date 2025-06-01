@@ -119,6 +119,7 @@
     binutils
     gnumake
     gcc
+    cmake
     vim
     tmux
     git
