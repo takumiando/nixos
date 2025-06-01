@@ -136,6 +136,7 @@
     distrobox
     starship
     restic
+    libfaketime
 
     # Programming
     python3
