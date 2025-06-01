@@ -131,6 +131,7 @@
     transmission_4-gtk
     distrobox
     starship
+    restic
 
     # Programming
     python3
