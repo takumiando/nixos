@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware/hazzard.nix
+      ./options/tpkbd.nix
     ];
 
   networking.hostName = "hazzard";
