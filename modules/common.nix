@@ -139,6 +139,11 @@
     restic
     libfaketime
 
+    # Archive utils
+    zip
+    unzip
+    zstd
+
     # Programming
     python3
 
