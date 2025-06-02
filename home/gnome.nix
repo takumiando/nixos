@@ -47,12 +47,6 @@ with lib.hm.gvariant;
         "kimpanel@kde.org"
         "tailscale@joaophi.github.com"
       ];
-      favorite-apps = [
-        "com.mitchellh.ghostty.desktop"
-        "vivaldi-stable.desktop"
-        "org.gnome.Nautilus.desktop"
-        "com.github.wwmm.easyeffects.desktop"
-      ];
       welcome-dialog-last-shown-version = "47.2";
     };
 
