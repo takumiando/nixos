@@ -126,6 +126,7 @@
     htop
     fzf
     bc
+    file
     xsel
     silver-searcher
     distrobox
