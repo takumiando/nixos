@@ -14,5 +14,6 @@
     libreoffice-qt
     zola
     antora
+    asciidoctor
   ];
 }
