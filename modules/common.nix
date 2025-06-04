@@ -147,6 +147,7 @@
 
     # Programming
     python3
+    julia
 
     # Terminal
     ghostty
