@@ -13,5 +13,6 @@
     google-chrome
     libreoffice-qt
     zola
+    antora
   ];
 }
