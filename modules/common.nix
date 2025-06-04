@@ -148,6 +148,7 @@
     # Programming
     python3
     julia
+    nodejs
 
     # Terminal
     ghostty
