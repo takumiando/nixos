@@ -12,5 +12,6 @@
   environment.systemPackages = with pkgs; [
     google-chrome
     libreoffice-qt
+    zola
   ];
 }
