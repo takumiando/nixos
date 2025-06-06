@@ -57,6 +57,12 @@
     variant = "";
   };
 
+  # Use CapsLock as Left Ctrl
+  services.udev.extraHwdb = ''
+    evdev:input:b*
+      KEYBOARD_KEY_3a=leftctrl
+  '';
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
