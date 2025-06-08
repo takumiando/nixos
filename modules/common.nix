@@ -134,6 +134,9 @@
     };
   };
 
+  # Enable USB accesses in VMs
+  virtualisation.spiceUSBRedirection.enable = true;
+
   # Enable fwupd
   services.fwupd.enable = true;
 
