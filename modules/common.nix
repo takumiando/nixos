@@ -90,6 +90,7 @@
       "wheel"
       "dialout"
       "networkmanager"
+      "libvirtd"
     ];
     shell = pkgs.zsh;
   };
