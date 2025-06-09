@@ -172,6 +172,7 @@
     shellcheck
     imagemagick
     minicom
+    tio
     libfaketime
 
     # Multimedia
