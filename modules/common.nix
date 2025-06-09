@@ -95,14 +95,14 @@
     shell = pkgs.zsh;
   };
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # Enable zsh
   programs.zsh.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -152,17 +152,8 @@
     bc
     file
     xsel
-    silver-searcher
-    distrobox
-    minicom
-    shellcheck
-    imagemagick
-    yt-dlp
-    transmission_4-gtk
-    distrobox
     starship
     restic
-    libfaketime
 
     # Archive utils
     zip
@@ -174,14 +165,21 @@
     julia
     nodejs
 
-    # Terminal
+    # Development tools
     ghostty
     kitty
+    silver-searcher
+    shellcheck
+    imagemagick
+    minicom
+    libfaketime
 
     # Multimedia
     ffmpeg
     mpv
     gimp
+    yt-dlp
+    transmission_4-gtk
 
     # Sound effector
     easyeffects
@@ -191,6 +189,7 @@
     pciutils
 
     # Virtualization
+    distrobox
     qemu_full
     qemu-utils
     virt-manager
