@@ -179,6 +179,7 @@
     ffmpeg
     mpv
     gimp
+    inkscape
     yt-dlp
     transmission_4-gtk
 
