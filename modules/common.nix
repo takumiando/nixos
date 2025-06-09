@@ -191,7 +191,8 @@
     pciutils
 
     # Virtualization
-    qemu
+    qemu_full
+    qemu-utils
     virt-manager
     gnome-boxes
 
