@@ -167,7 +167,7 @@
 
     # Development tools
     ghostty
-    kitty
+    chafa
     silver-searcher
     shellcheck
     imagemagick
