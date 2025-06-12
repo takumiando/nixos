@@ -12,6 +12,7 @@
   environment.systemPackages = with pkgs; [
     google-chrome
     libreoffice-qt
+    pandoc
     zola
     antora
     asciidoctor
