@@ -169,6 +169,7 @@
     nodejs
 
     # Development tools
+    gh
     ghostty
     chafa
     silver-searcher
