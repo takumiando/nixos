@@ -158,6 +158,12 @@
     starship
     restic
 
+    # Alternative shell utils
+    eza
+    bat
+    ripgrep
+    fd
+
     # Archive utils
     zip
     unzip
