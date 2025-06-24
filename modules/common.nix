@@ -183,6 +183,7 @@
     imagemagick
     minicom
     tio
+    just
     libfaketime
 
     # Multimedia
