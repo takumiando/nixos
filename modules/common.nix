@@ -185,6 +185,7 @@
     tio
     just
     libfaketime
+    yazi
 
     # Multimedia
     ffmpeg
