@@ -163,6 +163,7 @@
     bat
     ripgrep
     fd
+    dust
 
     # Archive utils
     zip
