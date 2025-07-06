@@ -187,6 +187,7 @@
     just
     libfaketime
     yazi
+    binwalk
 
     # Multimedia
     ffmpeg
