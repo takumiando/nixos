@@ -168,6 +168,7 @@
     # Archive utils
     zip
     unzip
+    unrar
     zstd
 
     # Programming
