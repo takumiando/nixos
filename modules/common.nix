@@ -144,6 +144,7 @@
   environment.systemPackages = with pkgs; [
     # Common utils
     binutils
+    moreutils
     gnumake
     gcc
     cmake
