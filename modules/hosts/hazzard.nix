@@ -22,4 +22,19 @@
   services.printing.drivers = with pkgs; [
     epson-escpr2
   ];
+
+  hardware.printers = {
+    ensurePrinters = [
+      {
+        name = "PX-S6710T";
+        location = "Office";
+        deviceUri = "https://10.30.0.101:631/ipp/print";
+        model = "epson-inkjet-printer-escpr2/Epson-PX-S6710T_Series-epson-escpr2-en.ppd";
+        ppdOptions = {
+          PageSize = "A4";
+        };
+      }
+    ];
+    ensureDefaultPrinter = "PX-S6710T";
+  };
 }
