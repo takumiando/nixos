@@ -18,4 +18,8 @@
     antora
     asciidoctor
   ];
+
+  services.printing.drivers = with pkgs; [
+    epson-escpr2
+  ];
 }
