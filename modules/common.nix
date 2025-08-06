@@ -102,7 +102,10 @@
   programs.zsh.enable = true;
 
   # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+    enable = true;
+    nativeMessagingHosts.packages = with pkgs; [ vdhcoapp ];
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
