@@ -193,6 +193,8 @@
     libfaketime
     yazi
     binwalk
+    jq
+    aria2
 
     # Multimedia
     ffmpeg
