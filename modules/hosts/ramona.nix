@@ -9,6 +9,10 @@
 
   networking.hostName = "ramona";
 
+  environment.systemPackages = with pkgs; [
+    prusa-slicer
+  ];
+
   # Enable fingerprint reader
   services.fprintd.enable = true;
 }
