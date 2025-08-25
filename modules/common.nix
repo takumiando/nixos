@@ -203,6 +203,7 @@
     inkscape
     yt-dlp
     transmission_4-gtk
+    fstl
 
     # Sound effector
     easyeffects
