@@ -4,6 +4,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.systemd-boot.configurationLimit = 8;
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -240,6 +241,12 @@
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 90d";
     };
   };
 
