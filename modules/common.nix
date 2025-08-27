@@ -6,6 +6,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 8;
 
+  # Enable support for running aarch64-linux binaries via qemu
+  boot.binfmt= {
+    emulatedSystems = [ "aarch64-linux" ];
+    preferStaticEmulators = true;
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
 
