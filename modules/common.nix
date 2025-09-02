@@ -242,6 +242,7 @@
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tailscale-qs
     gnomeExtensions.kimpanel
+    gnomeExtensions.color-picker
 
     # Nix utils
     home-manager
