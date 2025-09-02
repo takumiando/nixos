@@ -45,6 +45,7 @@ with lib.hm.gvariant;
         "blur-my-shell@aunetx"
         "kimpanel@kde.org"
         "tailscale@joaophi.github.com"
+        "color-picker@tuberry"
       ];
       welcome-dialog-last-shown-version = "47.2";
     };
@@ -93,6 +94,12 @@ with lib.hm.gvariant;
     "org/gnome/shell/extensions/blur-my-shell/window-list" = {
       brightness = 0.6;
       sigma = 30;
+    };
+
+    "org/gnome/shell/extensions/color-picker" = {
+      color-picker-shortcut = [ "<Super>c" ];
+      enable-shortcut = true;
+      enable-systray = false;
     };
 
     "org/gnome/tweaks" = {
