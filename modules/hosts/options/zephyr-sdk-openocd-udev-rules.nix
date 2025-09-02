@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  services.udev.extraHwdb = ''
+  services.udev.extraRules = ''
     ACTION!="add|change", GOTO="openocd_rules_end"
 
     SUBSYSTEM=="gpio", MODE="0660", GROUP="plugdev", TAG+="uaccess"
