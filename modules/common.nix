@@ -171,6 +171,7 @@
     xsel
     starship
     restic
+    global
 
     # Alternative shell utils
     eza
