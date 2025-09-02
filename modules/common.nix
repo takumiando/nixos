@@ -150,6 +150,9 @@
   # Enable fwupd
   services.fwupd.enable = true;
 
+  # Enable to use Saleae Logic 2
+  hardware.saleae-logic.enable = true;
+
   # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
@@ -202,6 +205,7 @@
     binwalk
     jq
     aria2
+    saleae-logic-2
 
     # Multimedia
     ffmpeg
