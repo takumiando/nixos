@@ -89,6 +89,9 @@
     #media-session.enable = true;
   };
 
+  # Groups
+  users.groups.plugdev = {};
+
   # User
   users.users.takumi = {
     isNormalUser = true;
@@ -98,6 +101,7 @@
       "dialout"
       "networkmanager"
       "libvirtd"
+      "plugdev"
     ];
     shell = pkgs.zsh;
   };
