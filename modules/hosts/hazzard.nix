@@ -6,7 +6,7 @@
       ./hardware/hazzard.nix
       ./options/tpkbd.nix
       ./options/xilinx.nix
-      ./options/zephyr-sdk-openocd-udev-rules.nix
+      ./options/zephyr.nix
     ];
 
   networking.hostName = "hazzard";
