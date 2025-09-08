@@ -39,7 +39,6 @@
         modules = [
           ./modules/base.nix
           cfg.hostModule
-          ./modules/home-manager.nix
         ] ++ (if cfg.hardware != null then [ cfg.hardware ] else []);
         specialArgs = { inherit home-manager; };
       }

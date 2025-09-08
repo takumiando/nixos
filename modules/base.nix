@@ -1,6 +1,13 @@
-{ config, pkgs, ... }:
+{ config, pkgs, home-manager, ... }:
 
 {
+  # Imports
+  imports = [ home-manager.nixosModules.home-manager ];
+
+  # Enable Home Manager
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
