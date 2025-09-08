@@ -109,6 +109,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable to use non-nix executables
+  programs.nix-ld = {
+    enable = true;
+    libraries = [];
+  };
+
   # Enable zsh
   programs.zsh.enable = true;
 
