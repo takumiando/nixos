@@ -4,7 +4,7 @@
   imports =
     [
       ./hardware/ramona.nix
-      ./options/tpkbd.nix
+      ../options/tpkbd.nix
     ];
 
   networking.hostName = "ramona";
