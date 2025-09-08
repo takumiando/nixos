@@ -37,7 +37,7 @@
       nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./modules/common.nix
+          ./modules/base.nix
           cfg.hostModule
           ./modules/home-manager.nix
         ] ++ (if cfg.hardware != null then [ cfg.hardware ] else []);
