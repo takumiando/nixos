@@ -15,19 +15,19 @@
 
     hosts = {
       nixos = {
-        hostModule = ./modules/hosts/default.nix;
+        hostModule = ./hosts/default.nix;
         hardware = null;
       };
       ramona = {
-        hostModule = ./modules/hosts/ramona.nix;
+        hostModule = ./hosts/ramona.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
       };
       zooey = {
-        hostModule = ./modules/hosts/zooey.nix;
+        hostModule = ./hosts/zooey.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x280;
       };
       hazzard = {
-        hostModule = ./modules/hosts/hazzard.nix;
+        hostModule = ./hosts/hazzard.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5;
       };
     };
