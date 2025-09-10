@@ -7,6 +7,10 @@ if [ -n "$1" ]; then
     HOST="$1"
 fi
 
-sudo nixos-rebuild switch --flake .#"$HOST"
+if [ "$HOST" = nixos ]; then
+    OPT=--impure
+fi
+
+sudo nixos-rebuild switch --flake .#"$HOST" $OPT
 
 home-manager switch --extra-experimental-features nix-command --flake .#takumi
