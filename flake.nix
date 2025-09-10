@@ -14,6 +14,10 @@
     system = "x86_64-linux";
 
     hosts = {
+      nixos = {
+        hostModule = ./modules/hosts/default.nix;
+        hardware = null;
+      };
       ramona = {
         hostModule = ./modules/hosts/ramona.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
@@ -26,10 +30,6 @@
         hostModule = ./modules/hosts/hazzard.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5;
       };
-      vm = {
-        hostModule = ./modules/hosts/vm.nix;
-        hardware = null;
-      };
     };
 
   in {
@@ -37,7 +37,6 @@
       nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
-          ./modules/base.nix
           cfg.hostModule
         ] ++ (if cfg.hardware != null then [ cfg.hardware ] else []);
         specialArgs = { inherit home-manager; };

@@ -4,9 +4,10 @@
   imports =
     [
       ./hardware/hazzard.nix
-      ../options/tpkbd.nix
-      ../options/xilinx.nix
-      ../options/zephyr.nix
+      ./modules/common.nix
+      ./modules/tpkbd.nix
+      ./modules/xilinx.nix
+      ./modules/zephyr.nix
     ];
 
   networking.hostName = "hazzard";

@@ -4,7 +4,8 @@
   imports =
     [
       ./hardware/zooey.nix
-      ../options/tpkbd.nix
+      ./modules/common.nix
+      ./modules/tpkbd.nix
     ];
 
   networking.hostName = "zooey";
