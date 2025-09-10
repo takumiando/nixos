@@ -5,6 +5,7 @@
     [
       ./hardware/hazzard.nix
       ./modules/common.nix
+      ./modules/sc-printers.nix
       ./modules/tpkbd.nix
       ./modules/xilinx.nix
       ./modules/zephyr.nix
@@ -20,32 +21,4 @@
     antora
     asciidoctor
   ];
-
-  services.printing.drivers = with pkgs; [
-    epson-escpr2
-  ];
-
-  hardware.printers = {
-    ensurePrinters = [
-      {
-        name = "PX-S6710T_Main_Printer";
-        location = "Office";
-        deviceUri = "https://10.30.0.101:631/ipp/print";
-        model = "epson-inkjet-printer-escpr2/Epson-PX-S6710T_Series-epson-escpr2-en.ppd";
-        ppdOptions = {
-          PageSize = "A4";
-        };
-      }
-      {
-        name = "PX-M5080F_Sub_Printer";
-        location = "Office";
-        deviceUri = "https://10.30.0.100:631/ipp/print";
-        model = "epson-inkjet-printer-escpr2/Epson-PX-M5080F_Series-epson-escpr2-en.ppd";
-        ppdOptions = {
-          PageSize = "A4";
-        };
-      }
-    ];
-    ensureDefaultPrinter = "PX-S6710T_Main_Printer";
-  };
 }
