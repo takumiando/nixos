@@ -182,6 +182,7 @@
     tmux
     git
     htop
+    btop
     fzf
     bc
     file
