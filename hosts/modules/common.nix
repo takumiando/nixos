@@ -254,6 +254,7 @@
     spotify
     discord
     steam
+    google-chrome
 
     # GNOME utils and extensions
     gnome-tweaks

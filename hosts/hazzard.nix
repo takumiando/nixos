@@ -14,7 +14,6 @@
   networking.hostName = "hazzard";
 
   environment.systemPackages = with pkgs; [
-    google-chrome
     libreoffice-qt
     pandoc
     zola
