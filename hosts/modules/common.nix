@@ -164,6 +164,9 @@
   # Enable USB accesses in VMs
   virtualisation.spiceUSBRedirection.enable = true;
 
+  # Enable tailscale
+  services.tailscale.enable = true;
+
   # Enable fwupd
   services.fwupd.enable = true;
 
@@ -208,6 +211,9 @@
     python3
     julia
     nodejs
+
+    # Networking
+    tailscale
 
     # Development tools
     gh
