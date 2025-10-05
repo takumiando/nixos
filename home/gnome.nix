@@ -46,6 +46,7 @@ with lib.hm.gvariant;
         "kimpanel@kde.org"
         "tailscale@joaophi.github.com"
         "color-picker@tuberry"
+        "gsconnect@andyholmes.github.io"
       ];
       welcome-dialog-last-shown-version = "47.2";
     };
