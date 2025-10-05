@@ -263,6 +263,7 @@
     gnomeExtensions.tailscale-qs
     gnomeExtensions.kimpanel
     gnomeExtensions.color-picker
+    gnomeExtensions.gsconnect
 
     # Nix utils
     home-manager
