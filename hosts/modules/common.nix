@@ -206,6 +206,7 @@
     unzip
     unrar
     zstd
+    unar
 
     # Programming
     python3
