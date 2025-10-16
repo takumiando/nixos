@@ -212,6 +212,7 @@
     python3
     julia
     nodejs
+    uv
 
     # Networking
     tailscale
