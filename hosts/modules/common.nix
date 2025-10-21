@@ -193,6 +193,7 @@
     starship
     restic
     global
+    waypipe
 
     # Alternative shell utils
     eza
