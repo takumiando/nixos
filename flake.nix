@@ -18,6 +18,10 @@
         hostModule = ./hosts/default.nix;
         hardware = null;
       };
+      emma = {
+        hostModule = ./hosts/emma.nix;
+        hardware = null;
+      };
       ramona = {
         hostModule = ./hosts/ramona.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
