@@ -184,6 +184,7 @@
     vim
     tmux
     git
+    git-lfs
     htop
     btop
     fzf
