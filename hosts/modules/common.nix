@@ -195,6 +195,7 @@
     restic
     global
     waypipe
+    killall
 
     # Alternative shell utils
     eza
