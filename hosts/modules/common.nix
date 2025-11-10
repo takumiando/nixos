@@ -196,6 +196,7 @@
     global
     waypipe
     killall
+    tree
 
     # Alternative shell utils
     eza
