@@ -113,6 +113,12 @@
     shell = pkgs.zsh;
   };
 
+  # Make /opt symlink to /home/takumi/opt
+  systemd.tmpfiles.rules = [
+    "d /home/takumi/opt 0755 takumi users -"
+    "L+ /opt - - - - /home/takumi/opt"
+  ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
