@@ -140,6 +140,8 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
   # Enable podman
   virtualisation.containers.enable = true;
   virtualisation = {
