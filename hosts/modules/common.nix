@@ -189,6 +189,7 @@
     gnumake
     gcc
     cmake
+    neovim
     vim
     tmux
     git
