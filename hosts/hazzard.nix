@@ -9,6 +9,7 @@
       ./modules/tpkbd.nix
       ./modules/xilinx.nix
       ./modules/zephyr.nix
+      ./modules/alientek.nix
     ];
 
   networking.hostName = "hazzard";
