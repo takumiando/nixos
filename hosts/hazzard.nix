@@ -10,6 +10,7 @@
       ./modules/xilinx.nix
       ./modules/zephyr.nix
       ./modules/alientek.nix
+      ./modules/sdwire.nix
     ];
 
   networking.hostName = "hazzard";
