@@ -279,6 +279,9 @@
     gnomeExtensions.color-picker
     gnomeExtensions.gsconnect
 
+    # Etc
+    fastfetch
+
     # Nix utils
     home-manager
   ];
