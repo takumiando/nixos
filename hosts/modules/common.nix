@@ -272,6 +272,7 @@
 
     # GNOME utils and extensions
     gnome-tweaks
+    ffmpegthumbnailer
     dconf2nix
     gnomeExtensions.blur-my-shell
     gnomeExtensions.tailscale-qs
