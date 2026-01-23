@@ -11,9 +11,12 @@
       ./modules/zephyr.nix
       ./modules/alientek.nix
       ./modules/sdwire.nix
+      ./modules/usbcan.nix
     ];
 
   networking.hostName = "hazzard";
+
+  services.slcand.enable = true;
 
   environment.systemPackages = with pkgs; [
     libreoffice-qt
