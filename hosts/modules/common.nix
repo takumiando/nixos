@@ -185,7 +185,7 @@
     neovim
     vim
     tmux
-    git
+    gitFull
     git-lfs
     htop
     btop
