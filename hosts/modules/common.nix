@@ -283,6 +283,9 @@
     # Etc
     fastfetch
 
+    # Messaging
+    signal-desktop
+
     # Nix utils
     home-manager
   ];
