@@ -13,6 +13,23 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 8;
 
+  # Kernel parameters
+  boot.kernelParams = [
+    "zswap.enabled=1"
+    "zswap.compressor=zstd"
+    "zswap.max_pool_percent=20"
+    "zswap.shrinker_enabled=1"
+  ];
+
+  # Swaps
+  swapDevices = [
+    # "size" is specified in MB to be set up in /etc/fstab
+    {
+      device = "/swapfile";
+      size = 16*1024;
+    }
+  ];
+
   # Enable support for running aarch64-linux binaries via qemu
   boot.binfmt= {
     emulatedSystems = [ "aarch64-linux" ];
