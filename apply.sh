@@ -7,10 +7,23 @@ if [ -n "$1" ]; then
     HOST="$1"
 fi
 
-if [ "$HOST" = nixos ]; then
-    OPT=--impure
-fi
+case "$HOST" in
+    nixos)
+        OPT=--impure
+        ;;
+    *)
+        ;;
+esac
 
-sudo nixos-rebuild switch --flake .#"$HOST" $OPT
+case "$HOST" in
+    machu)
+        SWITCH_CMD="nix-on-droid"
+        ;;
+    *)
+        SWITCH_CMD="nixos-rebuild"
+        ;;
+esac
+
+sudo "$SWITCH_CMD" switch --flake .#"$HOST" $OPT
 
 home-manager switch --extra-experimental-features nix-command --flake .#takumi
