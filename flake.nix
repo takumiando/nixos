@@ -11,26 +11,33 @@
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware }: let
-    system = "x86_64-linux";
-
     hosts = {
       nixos = {
+        system = "x86_64-linux";
         hostModule = ./hosts/default.nix;
         hardware = null;
       };
+
       emma = {
+        system = "x86_64-linux";
         hostModule = ./hosts/emma.nix;
         hardware = null;
       };
+
       ramona = {
+        system = "x86_64-linux";
         hostModule = ./hosts/ramona.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
       };
+
       zooey = {
+        system = "x86_64-linux";
         hostModule = ./hosts/zooey.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x280;
       };
+
       hazzard = {
+        system = "x86_64-linux";
         hostModule = ./hosts/hazzard.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5;
       };
