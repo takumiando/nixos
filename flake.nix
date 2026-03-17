@@ -41,6 +41,11 @@
         hostModule = ./hosts/hazzard.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14-amd-gen5;
       };
+
+      machu = {
+        system = "aarch64-linux";
+        hostModule = ./hosts/machu.nix;
+      };
     };
 
   in {
