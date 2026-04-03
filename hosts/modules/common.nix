@@ -64,13 +64,14 @@
       fcitx5.addons = [ pkgs.fcitx5-mozc ];
   };
 
-  # Japanese fonts
+  # Fonts
   fonts = {
     packages = with pkgs; [
       noto-fonts-cjk-serif
       noto-fonts-cjk-sans
       noto-fonts-color-emoji
       nerd-fonts.jetbrains-mono
+      mplus-outline-fonts.githubRelease
     ];
     fontDir.enable = true;
   };
