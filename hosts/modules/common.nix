@@ -272,6 +272,7 @@
     # Hardware utils
     usbutils
     pciutils
+    powertop
 
     # Virtualization
     distrobox
