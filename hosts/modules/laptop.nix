@@ -15,6 +15,8 @@ let
 
     on_ac=0
 
+    sleep 3
+
     for d in /sys/class/power_supply/*; do
       [ -d "$d" ] || continue
 
