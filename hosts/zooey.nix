@@ -5,6 +5,7 @@
     [
       ./hardware/zooey.nix
       ./modules/common.nix
+      ./modules/laptop.nix
       ./modules/tpkbd.nix
     ];
 

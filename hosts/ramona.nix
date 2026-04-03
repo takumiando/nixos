@@ -5,6 +5,7 @@
     [
       ./hardware/ramona.nix
       ./modules/common.nix
+      ./modules/laptop.nix
       ./modules/tpkbd.nix
     ];
 
