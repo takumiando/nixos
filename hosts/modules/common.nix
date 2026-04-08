@@ -257,6 +257,7 @@
     jq
     aria2
     saleae-logic-2
+    docutils
 
     # Multimedia
     ffmpeg
