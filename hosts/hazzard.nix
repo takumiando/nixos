@@ -13,6 +13,7 @@
       ./modules/alientek.nix
       ./modules/sdwire.nix
       ./modules/usbcan.nix
+      ./modules/cyusb.nix
     ];
 
   networking.hostName = "hazzard";
