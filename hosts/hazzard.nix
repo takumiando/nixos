@@ -5,7 +5,6 @@
     [
       ./hardware/hazzard.nix
       ./modules/common.nix
-      ./modules/laptop.nix
       ./modules/sc-printers.nix
       ./modules/tpkbd.nix
       ./modules/xilinx.nix
