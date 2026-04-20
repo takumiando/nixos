@@ -343,6 +343,7 @@
 
     # Etc
     fastfetch
+    pfetch
 
     # Messaging
     signal-desktop
