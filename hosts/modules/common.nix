@@ -152,7 +152,6 @@
   # Install firefox.
   programs.firefox = {
     enable = true;
-    nativeMessagingHosts.packages = with pkgs; [ vdhcoapp ];
   };
 
   # Enable the OpenSSH daemon.
