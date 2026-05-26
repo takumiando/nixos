@@ -300,7 +300,7 @@
     docutils
 
     # Multimedia
-    ffmpeg
+    ffmpeg-full
     mpv
     gimp3
     inkscape
