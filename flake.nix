@@ -7,7 +7,8 @@
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware.url = "github:takumiando/nixos-hardware/thinkpad-x13-gen7";
   };
 
   outputs = { self, nixpkgs, home-manager, nixos-hardware }: let
@@ -24,7 +25,8 @@
       };
       ramona = {
         hostModule = ./hosts/ramona.nix;
-        hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
+        #hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
+        hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x13-intel-gen7;
       };
       zooey = {
         hostModule = ./hosts/zooey.nix;

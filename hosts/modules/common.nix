@@ -127,6 +127,7 @@
       "networkmanager"
       "libvirtd"
       "plugdev"
+      "video"
     ];
     shell = pkgs.zsh;
   };
