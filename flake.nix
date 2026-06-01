@@ -25,8 +25,8 @@
       };
       ramona = {
         hostModule = ./hosts/ramona.nix;
-        #hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
-        hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x13-intel-gen7;
+        hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
+        #hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x13-intel-gen7;
       };
       zooey = {
         hostModule = ./hosts/zooey.nix;
