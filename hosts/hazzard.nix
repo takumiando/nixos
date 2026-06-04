@@ -5,6 +5,7 @@
     [
       ./hardware/hazzard.nix
       ./modules/common.nix
+      ./modules/noctalia.nix
       ./modules/sc-printers.nix
       ./modules/tpkbd.nix
       ./modules/xilinx.nix
