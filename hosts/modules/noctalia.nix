@@ -10,6 +10,7 @@
     wl-clipboard
     grim
     slurp
+    hyprpicker
 
     adwaita-icon-theme
   ];
