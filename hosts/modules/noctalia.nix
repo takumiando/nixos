@@ -1,18 +1,19 @@
-{ config, pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
+  imports = [ ./desktop.nix ];
+
+  # niri/noctalia session. Shared GNOME applications such as Nautilus live in
+  # desktop.nix so they are available here without enabling GNOME Shell/GDM.
   environment.systemPackages = with pkgs; [
     noctalia-shell
 
     xwayland-satellite
     brightnessctl
     pavucontrol
-    wl-clipboard
     grim
     slurp
     hyprpicker
-
-    adwaita-icon-theme
   ];
 
   programs.niri = {
@@ -21,9 +22,7 @@
   };
 
   xdg.portal = {
-    enable = true;
     extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
     ];
 
@@ -34,7 +33,6 @@
     };
   };
 
-  services.displayManager.gdm.enable = lib.mkForce false;
   services.greetd = {
     enable = true;
     settings = {
@@ -45,8 +43,5 @@
     };
   };
 
-  services.gvfs.enable = true;
-  services.udisks2.enable = true;
-  services.gnome.gnome-keyring.enable = true;
   security.pam.services.greetd.enableGnomeKeyring = true;
 }

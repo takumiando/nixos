@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
+      # Keep Home Manager on master while nixpkgs follows nixos-unstable.
       url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
@@ -48,18 +49,5 @@
         specialArgs = { inherit home-manager; };
       }
     ) hosts;
-
-    homeConfigurations = {
-      "takumi" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        modules = [
-          ./home/takumi.nix
-          ./home/gnome.nix
-        ];
-      };
-    };
   };
 }

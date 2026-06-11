@@ -2,11 +2,18 @@
 
 {
   # Imports
-  imports = [ home-manager.nixosModules.home-manager ];
+  imports = [
+    home-manager.nixosModules.home-manager
+  ];
 
-  # Enable Home Manager
+  # Enable Home Manager as part of nixos-rebuild, so system and user
+  # generations are switched atomically.
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
+  home-manager.users.takumi.imports = [
+    ../../home/takumi.nix
+    ../../home/gnome.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -38,6 +45,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+
+  # Enable Bluetooth. GNOME used to enable this implicitly; keep it
+  # explicit so niri/noctalia machines keep working without GNOME Shell.
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
@@ -81,19 +95,6 @@
       mplus-outline-fonts.githubRelease
     ];
     fontDir.enable = true;
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
   };
 
   # Use CapsLock as Left Ctrl
@@ -156,11 +157,6 @@
 
   # Enable zsh
   programs.zsh.enable = true;
-
-  # Install firefox.
-  programs.firefox = {
-    enable = true;
-  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -237,9 +233,6 @@
   # Enable fwupd
   services.fwupd.enable = true;
 
-  # Enable to use Saleae Logic 2
-  hardware.saleae-logic.enable = true;
-
   # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
@@ -258,11 +251,9 @@
     fzf
     bc
     file
-    xsel
     starship
     restic
     global
-    waypipe
     killall
     tree
 
@@ -291,7 +282,6 @@
 
     # Development tools
     gh
-    ghostty
     chafa
     silver-searcher
     shellcheck
@@ -304,20 +294,13 @@
     binwalk
     jq
     aria2
-    saleae-logic-2
     docutils
 
     # Multimedia
     ffmpeg-full
-    mpv
-    gimp3
-    inkscape
     yt-dlp
-    transmission_4-gtk
-    fstl
 
     # Sound effector
-    easyeffects
 
     # Hardware utils
     usbutils
@@ -328,32 +311,14 @@
     distrobox
     qemu_full
     qemu-utils
-    virt-manager
-    gnome-boxes
 
     # Non-free apps
-    vivaldi
-    spotify
-    discord
-    steam
-    google-chrome
-
-    # GNOME utils and extensions
-    gnome-tweaks
-    ffmpegthumbnailer
-    dconf2nix
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.tailscale-qs
-    gnomeExtensions.kimpanel
-    gnomeExtensions.color-picker
-    gnomeExtensions.gsconnect
 
     # Etc
     fastfetch
     pfetch
 
     # Messaging
-    signal-desktop
 
     # Nix utils
     home-manager

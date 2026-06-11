@@ -1,16 +1,19 @@
 #!/bin/sh
+set -eu
 
 cd "$(dirname "$0")" || exit 1
 
 HOST="$(hostname)"
-if [ -n "$1" ]; then
+if [ -n "${1:-}" ]; then
     HOST="$1"
 fi
 
+OPT=""
 if [ "$HOST" = nixos ]; then
-    OPT=--impure
+    # Fresh installs usually still import /etc/nixos/hardware-configuration.nix.
+    OPT="--impure"
 fi
 
-sudo nixos-rebuild switch --flake .#"$HOST" $OPT
-
-home-manager switch --extra-experimental-features nix-command --flake .#takumi
+# Make this script work before the target system has enabled flakes in nix.conf.
+sudo env NIX_CONFIG="experimental-features = nix-command flakes" \
+    nixos-rebuild switch --flake ".#$HOST" $OPT

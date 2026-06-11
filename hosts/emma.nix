@@ -5,6 +5,7 @@
     [
       ./hardware/emma.nix
       ./modules/common.nix
+      ./modules/gnome.nix
     ];
 
   networking.hostName = "emma";
