@@ -186,6 +186,9 @@
   # Enable USB accesses in VMs
   virtualisation.spiceUSBRedirection.enable = true;
 
+  # Enable UPower
+  services.upower.enable = true;
+
   # Use TLP instead of power-profile-daemon
   services.power-profiles-daemon.enable = false;
   services.tlp = {
