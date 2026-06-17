@@ -14,6 +14,17 @@
   # Bluetooth GUI for non-GNOME sessions such as niri/noctalia.
   services.blueman.enable = true;
 
+  # EasyEffects 8 stores these global stream-routing flags in KConfig.
+  # Keep input processing disabled so browser calls connect directly to
+  # Bluetooth headset microphones and WirePlumber can autoswitch to HFP/mSBC.
+  # The [$i] marker makes only these keys immutable via KConfig kiosk support,
+  # while leaving the rest of EasyEffects' user-writable config alone.
+  environment.etc."xdg/easyeffects/db/easyeffectsrc".text = ''
+    [EffectsPipelines]
+    processAllInputs[$i]=false
+    processAllOutputs[$i]=true
+  '';
+
   # Switch A2DP/LDAC to HFP/HSP profiles automatically when mic is used
   services.pipewire.wireplumber.extraConfig = {
     "10-bluez-msbc" = {
