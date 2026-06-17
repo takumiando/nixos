@@ -14,6 +14,23 @@
   # Bluetooth GUI for non-GNOME sessions such as niri/noctalia.
   services.blueman.enable = true;
 
+  # Switch A2DP/LDAC to HFP/HSP profiles automatically when mic is used
+  services.pipewire.wireplumber.extraConfig = {
+    "10-bluez-msbc" = {
+      "monitor.bluez.properties" = {
+        "bluez5.enable-msbc" = true;
+        "bluez5.hfphsp-backend" = "native";
+        "bluez5.a2dp.ldac.quality" = "auto";
+      };
+    };
+
+    "11-bluetooth-autoswitch" = {
+      "wireplumber.settings" = {
+        "bluetooth.autoswitch-to-headset-profile" = true;
+      };
+    };
+  };
+
   # Firefox is a desktop application, so keep it with the desktop profile.
   programs.firefox.enable = true;
 
