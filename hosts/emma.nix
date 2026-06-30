@@ -5,7 +5,7 @@
     [
       ./hardware/emma.nix
       ./modules/common.nix
-      ./modules/gnome.nix
+      ./modules/noctalia.nix
     ];
 
   networking.hostName = "emma";
