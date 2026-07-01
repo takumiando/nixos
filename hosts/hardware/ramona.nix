@@ -8,33 +8,41 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "thunderbolt" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/c38d8372-db88-4b65-9a90-5a81746c0332";
-      fsType = "ext4";
+    { device = "/dev/mapper/luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b";
+      fsType = "btrfs";
+    };
+
+  boot.initrd.luks.devices."luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b".device = "/dev/disk/by-uuid/483ef956-d9c2-4d75-8ce1-f5604d6b071b";
+
+  fileSystems."/home" =
+    { device = "/dev/mapper/luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b";
+      fsType = "btrfs";
+      options = [ "subvol=home" ];
+    };
+
+  fileSystems."/nix" =
+    { device = "/dev/mapper/luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b";
+      fsType = "btrfs";
+      options = [ "subvol=nix" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/79E9-23BB";
+    { device = "/dev/disk/by-uuid/B3CA-9CAB";
       fsType = "vfat";
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/cce991a9-c023-4176-9b1f-81248c4fa7cf"; }
+    [ { device = "/dev/mapper/luks-7c9eacbe-4d01-4ce7-8d6a-4b0764705e9a"; }
     ];
 
-  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-  # (the default) this is the recommended approach. When using systemd-networkd it's
-  # still possible to use this option, but it's recommended to use it in conjunction
-  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.wlp1s0.useDHCP = lib.mkDefault true;
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.cpu.intel.npu.enable = true;
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
