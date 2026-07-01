@@ -18,7 +18,12 @@
       fsType = "btrfs";
     };
 
-  boot.initrd.luks.devices."luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b".device = "/dev/disk/by-uuid/483ef956-d9c2-4d75-8ce1-f5604d6b071b";
+  boot.initrd.luks.devices = {
+    "luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b".device =
+      "/dev/disk/by-uuid/483ef956-d9c2-4d75-8ce1-f5604d6b071b";
+    "luks-7c9eacbe-4d01-4ce7-8d6a-4b0764705e9a".device =
+      "/dev/disk/by-uuid/7c9eacbe-4d01-4ce7-8d6a-4b0764705e9a";
+  };
 
   fileSystems."/home" =
     { device = "/dev/mapper/luks-483ef956-d9c2-4d75-8ce1-f5604d6b071b";
@@ -40,7 +45,9 @@
 
   swapDevices =
     [ { device = "/dev/mapper/luks-7c9eacbe-4d01-4ce7-8d6a-4b0764705e9a"; }
-    ];
+  ];
+
+  boot.resumeDevice = "/dev/mapper/luks-7c9eacbe-4d01-4ce7-8d6a-4b0764705e9a";
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.npu.enable = true;
