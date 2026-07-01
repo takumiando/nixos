@@ -46,6 +46,15 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Use DNS from Cloudflare
+  networking.nameservers = [
+    "1.1.1.1"
+    "1.0.0.1"
+  ];
+
+  # Disable EDNS
+  networking.resolvconf.dnsExtensionMechanism = false;
+
   # Enable Bluetooth. GNOME used to enable this implicitly; keep it
   # explicit so niri/noctalia machines keep working without GNOME Shell.
   hardware.bluetooth = {
