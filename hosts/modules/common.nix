@@ -313,6 +313,7 @@
     uv
 
     # Networking
+    iw
     tailscale
 
     # Development tools
