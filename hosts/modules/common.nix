@@ -319,7 +319,7 @@
     # Development tools
     gh
     chafa
-    silver-searcher
+    silver-searcher-ng
     shellcheck
     imagemagick
     minicom
