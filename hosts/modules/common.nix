@@ -20,6 +20,9 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 8;
 
+  # Latest Kernel
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Kernel parameters
   boot.kernelParams = [
     "zswap.enabled=1"
