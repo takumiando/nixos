@@ -209,7 +209,6 @@
   virtualisation.libvirtd = {
     enable = true;
     qemu = {
-      package = pkgs.qemu_full;
       runAsRoot = true;
       swtpm.enable = true;
     };
@@ -345,7 +344,6 @@
 
     # Virtualization
     distrobox
-    qemu_full
     qemu-utils
 
     # Non-free apps
