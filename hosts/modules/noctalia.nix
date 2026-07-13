@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, noctalia, ... }:
 
 {
   imports = [ ./desktop.nix ];
@@ -6,7 +6,7 @@
   # niri/noctalia session. Shared GNOME applications such as Nautilus live in
   # desktop.nix so they are available here without enabling GNOME Shell/GDM.
   environment.systemPackages = with pkgs; [
-    noctalia-shell
+    noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
 
     xwayland-satellite
     brightnessctl
