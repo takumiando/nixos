@@ -109,27 +109,36 @@
       nerd-fonts.jetbrains-mono
       mplus-outline-fonts.githubRelease
     ];
+
     fontDir.enable = true;
-  };
 
+    fontconfig = {
+      defaultFonts = {
+        sansSerif = [
+          "DejaVu Sans"
+          "Noto Sans CJK JP"
+        ];
+        serif = [
+          "DejaVu Serif"
+          "Noto Serif CJK JP"
+        ];
+        monospace = [
+          "JetBrainsMono Nerd Font"
+          "DejaVu Sans Mono"
+          "Noto Sans Mono CJK JP"
+        ];
+        emoji = [
+          "Noto Color Emoji"
+        ];
+      };
 
-  fonts.fontconfig.defaultFonts = {
-    sansSerif = [
-      "DejaVu Sans"
-      "Noto Sans CJK JP"
-    ];
-    serif = [
-      "DejaVu Serif"
-      "Noto Serif CJK JP"
-    ];
-    monospace = [
-      "JetBrainsMono Nerd Font"
-      "DejaVu Sans Mono"
-      "Noto Sans Mono CJK JP"
-    ];
-    emoji = [
-      "Noto Color Emoji"
-    ];
+      aliases."Adwaita Sans" = {
+        binding = "strong";
+        accept = [
+          "Noto Sans CJK JP"
+        ];
+      };
+    };
   };
 
   # Use CapsLock as Left Ctrl
