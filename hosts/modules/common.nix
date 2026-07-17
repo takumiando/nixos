@@ -303,6 +303,7 @@
     global
     killall
     tree
+    direnv
 
     # Alternative shell utils
     eza
