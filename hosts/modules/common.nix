@@ -182,6 +182,7 @@
       "video"
     ];
     shell = pkgs.zsh;
+    linger = true;
   };
 
   # Make /opt symlink to /home/takumi/opt
