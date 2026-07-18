@@ -5,9 +5,9 @@ let
   linuxPtlPatch = name: linuxPtlPatchDir + "/${name}";
 in
 {
-  # Use Linux Kernel v7.0
+  # Use Linux Kernel v7.1
   boot.kernelPackages =
-    pkgs.linuxPackagesFor pkgs.linuxKernel.kernels.linux_7_0;
+    pkgs.linuxPackagesFor pkgs.linuxKernel.kernels.linux_7_1;
 
   # Apply linux-ptl patches from omarchy-pkgs
   boot.kernelPatches = lib.mkAfter [
@@ -26,14 +26,6 @@ in
     {
       name = "drm-i915-psr-allow-psr-with-vrr-on-ptl";
       patch = linuxPtlPatch "0022-drm-i915-psr-allow-psr-with-vrr-on-ptl.patch";
-    }
-    {
-      name = "drm-i915-trans-push-frame-change-for-panel-replay";
-      patch = linuxPtlPatch "0027-drm-i915-trans-push-frame-change-for-panel-replay.patch";
-    }
-    {
-      name = "drm-i915-psr-exit-Panel-Replay-for-ALPM-lag";
-      patch = linuxPtlPatch "0028-drm-i915-psr-exit-Panel-Replay-for-ALPM-lag.patch";
     }
     {
       name = "drm-edid-populate-monitor-range-from-displayid-adaptive-sync";
