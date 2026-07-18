@@ -7,6 +7,7 @@
       ./modules/common.nix
       ./modules/tpkbd.nix
       ./modules/noctalia.nix
+      ./modules/linux-ptl.nix
     ];
 
   networking.hostName = "ramona";

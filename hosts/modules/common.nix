@@ -1,4 +1,4 @@
-{ config, pkgs, home-manager, ... }:
+{ config, pkgs, lib, home-manager, ... }:
 
 {
   # Imports
@@ -21,7 +21,7 @@
   boot.loader.systemd-boot.configurationLimit = 8;
 
   # Latest Kernel
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
   # Kernel parameters
   boot.kernelParams = [
