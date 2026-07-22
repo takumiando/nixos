@@ -4,9 +4,9 @@
   imports =
     [
       ./hardware/zooey.nix
-      ./modules/common.nix
-      ./modules/tpkbd.nix
-      ./modules/noctalia.nix
+      ../modules/common.nix
+      ../modules/tpkbd.nix
+      ../modules/noctalia.nix
     ];
 
   networking.hostName = "zooey";

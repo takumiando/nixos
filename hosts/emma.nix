@@ -4,8 +4,8 @@
   imports =
     [
       ./hardware/emma.nix
-      ./modules/common.nix
-      ./modules/noctalia.nix
+      ../modules/common.nix
+      ../modules/noctalia.nix
     ];
 
   networking.hostName = "emma";

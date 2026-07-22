@@ -4,17 +4,17 @@
   imports =
     [
       ./hardware/hazzard.nix
-      ./modules/common.nix
-      ./modules/noctalia.nix
-      ./modules/sc-printers.nix
-      ./modules/tpkbd.nix
-      ./modules/xilinx.nix
-      ./modules/zephyr.nix
-      ./modules/alientek.nix
-      ./modules/sdwire.nix
-      ./modules/usbcan.nix
-      ./modules/cyusb.nix
-      ./modules/debug.nix
+      ../modules/common.nix
+      ../modules/noctalia.nix
+      ../modules/sc-printers.nix
+      ../modules/tpkbd.nix
+      ../modules/xilinx.nix
+      ../modules/zephyr.nix
+      ../modules/alientek.nix
+      ../modules/sdwire.nix
+      ../modules/usbcan.nix
+      ../modules/cyusb.nix
+      ../modules/debug.nix
     ];
 
   networking.hostName = "hazzard";

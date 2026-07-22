@@ -11,8 +11,8 @@
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.takumi.imports = [
-    ../../home/takumi.nix
-    ../../home/gnome.nix
+    ../home/takumi.nix
+    ../home/gnome.nix
   ];
 
   # Bootloader.
