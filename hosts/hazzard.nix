@@ -15,6 +15,7 @@
       ../modules/usbcan.nix
       ../modules/cyusb.nix
       ../modules/debug.nix
+      ../modules/swapfile.nix
     ];
 
   networking.hostName = "hazzard";

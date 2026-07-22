@@ -6,6 +6,7 @@
       ./hardware/emma.nix
       ../modules/common.nix
       ../modules/noctalia.nix
+      ../modules/swapfile.nix
     ];
 
   networking.hostName = "emma";

@@ -31,15 +31,6 @@
     "zswap.shrinker_enabled=1"
   ];
 
-  # Swaps
-  swapDevices = [
-    # "size" is specified in MB to be set up in /etc/fstab
-    {
-      device = "/swapfile";
-      size = 16*1024;
-    }
-  ];
-
   # Enable support for running aarch64-linux binaries via qemu
   boot.binfmt= {
     emulatedSystems = [ "aarch64-linux" ];
