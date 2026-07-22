@@ -344,6 +344,7 @@
     jq
     aria2
     docutils
+    codex
 
     # Multimedia
     ffmpeg-full
