@@ -3,6 +3,8 @@
 {
   imports = [ ./desktop.nix ];
 
+  home-manager.users.takumi.imports = [ ../home/gnome.nix ];
+
   # GNOME Shell session and GDM. Shared GNOME applications live in desktop.nix.
   environment.systemPackages = with pkgs; [
     gnome-tweaks
@@ -21,8 +23,4 @@
 
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
-
-  xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-gnome
-  ];
 }

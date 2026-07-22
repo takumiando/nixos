@@ -14,11 +14,11 @@
   };
 
   outputs = {
-    self,
     nixpkgs,
     home-manager,
     nixos-hardware,
-    noctalia
+    noctalia,
+    ...
   }: let
     system = "x86_64-linux";
 
@@ -46,7 +46,7 @@
     };
 
   in {
-    nixosConfigurations = builtins.mapAttrs (name: cfg:
+    nixosConfigurations = builtins.mapAttrs (_: cfg:
       nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [

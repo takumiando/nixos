@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 let
   linuxPtlPatchDir = ./patches/linux-ptl;

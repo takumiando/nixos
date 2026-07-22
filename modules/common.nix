@@ -1,4 +1,4 @@
-{ config, pkgs, lib, home-manager, ... }:
+{ pkgs, lib, home-manager, ... }:
 
 {
   # Imports
@@ -12,7 +12,6 @@
   home-manager.useUserPackages = true;
   home-manager.users.takumi.imports = [
     ../home/takumi.nix
-    ../home/gnome.nix
   ];
 
   # Bootloader.
@@ -51,10 +50,7 @@
 
   # Enable Bluetooth. GNOME used to enable this implicitly; keep it
   # explicit so niri/noctalia machines keep working without GNOME Shell.
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
+  hardware.bluetooth.enable = true;
 
   # Set your time zone.
   time.timeZone = "Asia/Tokyo";
@@ -142,7 +138,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -186,10 +181,7 @@
   nixpkgs.config.allowUnfree = true;
 
   # Enable to use non-nix executables
-  programs.nix-ld = {
-    enable = true;
-    libraries = [];
-  };
+  programs.nix-ld.enable = true;
 
   # Enable zsh
   programs.zsh.enable = true;
@@ -200,7 +192,6 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Enable podman
-  virtualisation.containers.enable = true;
   virtualisation = {
     podman = {
       enable = true;
@@ -318,8 +309,6 @@
 
     # Networking
     iw
-    tailscale
-
     # Development tools
     gh
     chafa
@@ -341,8 +330,6 @@
     ffmpeg-full
     yt-dlp
 
-    # Sound effector
-
     # Hardware utils
     usbutils
     pciutils
@@ -352,13 +339,9 @@
     distrobox
     qemu-utils
 
-    # Non-free apps
-
     # Etc
     fastfetch
     pfetch
-
-    # Messaging
 
     # Nix utils
     home-manager

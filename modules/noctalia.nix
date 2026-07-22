@@ -16,22 +16,16 @@
     hyprpicker
   ];
 
-  programs.niri = {
-    enable = true;
-    useNautilus = true;
-  };
+  programs.niri.enable = true;
 
-  xdg.portal = {
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gnome
-    ];
-
-    config = {
-      niri = {
-        default = [ "gnome" "gtk" ];
-      };
+  xdg.portal.config = {
+    niri = {
+      default = [ "gnome" "gtk" ];
     };
   };
+
+  # Bluetooth GUI for non-GNOME sessions such as niri/noctalia.
+  services.blueman.enable = true;
 
   services.greetd = {
     enable = true;

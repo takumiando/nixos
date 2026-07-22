@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   # Desktop applications and integration bits shared by both GNOME Shell and
@@ -10,9 +10,6 @@
   services.gvfs.enable = true;
   services.udisks2.enable = true;
   services.gnome.gnome-keyring.enable = true;
-
-  # Bluetooth GUI for non-GNOME sessions such as niri/noctalia.
-  services.blueman.enable = true;
 
   # EasyEffects 8 stores these global stream-routing flags in KConfig.
   # Keep input processing disabled so browser calls connect directly to
@@ -48,12 +45,7 @@
   # Enable to use Saleae Logic 2
   hardware.saleae-logic.enable = true;
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-    ];
-  };
+  xdg.portal.enable = true;
 
   environment.systemPackages = with pkgs; [
     # Terminal / desktop shell utilities
@@ -75,9 +67,7 @@
     adwaita-icon-theme
 
     # Multimedia / creative desktop apps
-    loupe
     mpv
-    papers
     gimp3
     inkscape
     transmission_4-gtk
