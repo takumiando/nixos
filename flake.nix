@@ -10,14 +10,12 @@
     };
     # nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixos-hardware.url = "github:takumiando/nixos-hardware/thinkpad-x13-gen7";
-    noctalia.url = "github:noctalia-dev/noctalia";
   };
 
   outputs = {
     nixpkgs,
     home-manager,
     nixos-hardware,
-    noctalia,
     ...
   }: let
     system = "x86_64-linux";
@@ -52,7 +50,7 @@
         modules = [
           cfg.hostModule
         ] ++ (if cfg.hardware != null then [ cfg.hardware ] else []);
-        specialArgs = { inherit home-manager noctalia; };
+        specialArgs = { inherit home-manager; };
       }
     ) hosts;
   };
