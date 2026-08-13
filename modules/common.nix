@@ -309,6 +309,8 @@
 
     # Networking
     iw
+    bluetui
+
     # Development tools
     gh
     chafa
