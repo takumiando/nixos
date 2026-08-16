@@ -7,7 +7,7 @@
       ../modules/common.nix
       ../modules/noctalia.nix
       ../modules/sc-printers.nix
-      ../modules/tpkbd.nix
+      ../modules/keyboard.nix
       ../modules/xilinx.nix
       ../modules/zephyr.nix
       ../modules/alientek.nix

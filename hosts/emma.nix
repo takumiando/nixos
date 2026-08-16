@@ -5,6 +5,7 @@
     [
       ./hardware/emma.nix
       ../modules/common.nix
+      ../modules/keyboard.nix
       ../modules/noctalia.nix
       ../modules/swapfile.nix
     ];

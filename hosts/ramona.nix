@@ -5,7 +5,7 @@
     [
       ./hardware/ramona.nix
       ../modules/common.nix
-      ../modules/tpkbd.nix
+      ../modules/keyboard.nix
       ../modules/noctalia.nix
       ../modules/linux-ptl.nix
     ];

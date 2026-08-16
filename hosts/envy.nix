@@ -5,7 +5,7 @@
     [
       ./hardware/envy.nix
       ../modules/common.nix
-      ../modules/tpkbd.nix
+      ../modules/keyboard.nix
       ../modules/noctalia.nix
     ];
 
