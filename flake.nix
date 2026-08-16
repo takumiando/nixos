@@ -33,6 +33,10 @@
         hostModule = ./hosts/ramona.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x13-intel-gen7;
       };
+      envy = {
+        hostModule = ./hosts/envy.nix;
+        hardware = nixos-hardware.nixosModules.lenovo-thinkpad-t14s-amd-gen4;
+      };
       zooey = {
         hostModule = ./hosts/zooey.nix;
         hardware = nixos-hardware.nixosModules.lenovo-thinkpad-x280;
