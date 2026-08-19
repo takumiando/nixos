@@ -327,6 +327,7 @@
     aria2
     docutils
     codex
+    github-copilot-cli
 
     # Multimedia
     ffmpeg-full
