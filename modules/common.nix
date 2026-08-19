@@ -331,6 +331,7 @@
     # Multimedia
     ffmpeg-full
     yt-dlp
+    gallery-dl
 
     # Hardware utils
     usbutils
