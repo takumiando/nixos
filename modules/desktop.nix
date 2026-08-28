@@ -47,6 +47,16 @@
   # Firefox is a desktop application, so keep it with the desktop profile.
   programs.firefox.enable = true;
 
+  # Enable Steam and necessary configs
+  programs.steam.enable = true;
+  users.groups.uinput = {};
+  users.users.takumi.extraGroups = [
+    "uinput"
+  ];
+  services.udev.extraRules = ''
+    KERNEL=="uinput", SUBSYSTEM=="misc", MODE="0660", GROUP="uinput"
+  '';
+
   # Enable to use Saleae Logic 2
   hardware.saleae-logic.enable = true;
 
@@ -92,7 +102,6 @@
     vivaldi
     spotify
     discord
-    steam
     google-chrome
 
     # Messaging
