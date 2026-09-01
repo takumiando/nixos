@@ -262,6 +262,19 @@
   # Enable fwupd
   services.fwupd.enable = true;
 
+  # Global Codex configuration
+  environment.etc."codex/config.toml".text = ''
+    default_permissions = "serial-device"
+    service_tier = "default"
+
+    [permissions.serial-device]
+    extends = ":workspace"
+
+    [tui]
+    status_line = ["current-dir", "context-remaining", "five-hour-limit", "weekly-limit"]
+    status_line_use_colors = true
+  '';
+
   # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
