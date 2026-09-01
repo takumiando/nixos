@@ -5,6 +5,11 @@
   # niri/noctalia sessions. Session-specific display/login settings belong in
   # gnome.nix or noctalia.nix.
 
+  imports =
+    [
+      ./3dcad.nix
+    ];
+
   # GNOME-adjacent services used by Nautilus and many GTK/GNOME apps even when
   # the actual session is niri/noctalia.
   services.gvfs.enable = true;
