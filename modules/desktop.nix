@@ -50,6 +50,9 @@
   # Enable to use Saleae Logic 2
   hardware.saleae-logic.enable = true;
 
+  # Enable to use GPU screen recorder
+  programs.gpu-screen-recorder.enable = true;
+
   xdg.portal.enable = true;
 
   environment.systemPackages = with pkgs; [
