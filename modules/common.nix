@@ -189,6 +189,13 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
+  # Enable Avahi
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Enable podman
