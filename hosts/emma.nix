@@ -8,6 +8,7 @@
       ../modules/keyboard.nix
       ../modules/noctalia.nix
       ../modules/swapfile.nix
+      ../modules/numworks.nix
     ];
 
   networking.hostName = "emma";

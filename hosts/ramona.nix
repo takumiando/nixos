@@ -8,6 +8,7 @@
       ../modules/keyboard.nix
       ../modules/noctalia.nix
       ../modules/linux-ptl.nix
+      ../modules/numworks.nix
     ];
 
   networking.hostName = "ramona";

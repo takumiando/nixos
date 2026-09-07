@@ -14,6 +14,7 @@
       ../modules/sdwire.nix
       ../modules/usbcan.nix
       ../modules/cyusb.nix
+      ../modules/numworks.nix
       ../modules/debug.nix
       ../modules/swapfile.nix
     ];
