@@ -280,6 +280,7 @@
     [tui]
     status_line = ["current-dir", "context-remaining", "five-hour-limit", "weekly-limit"]
     status_line_use_colors = true
+    theme = "base16-256"
   '';
 
   # Enable local bin in path
