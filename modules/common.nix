@@ -95,6 +95,12 @@
       noto-fonts-color-emoji
       nerd-fonts.jetbrains-mono
       mplus-outline-fonts.githubRelease
+
+      (google-fonts.override {
+        fonts = [
+          "Audiowide"
+        ];
+      })
     ];
 
     fontDir.enable = true;
