@@ -282,6 +282,11 @@
     status_line_use_colors = true
   '';
 
+  # Enable local bin in path
+  # This is for using cutting-edge applications outside of nixpkgs,
+  # such as codex.
+  environment.localBinInPath = true;
+
   # Packages
   environment.systemPackages = with pkgs; [
     # Common utils
