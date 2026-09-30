@@ -352,6 +352,7 @@
     aria2
     docutils
     codex
+    bubblewrap
     github-copilot-cli
 
     # Multimedia
