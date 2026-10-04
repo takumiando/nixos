@@ -99,6 +99,8 @@
       (google-fonts.override {
         fonts = [
           "Audiowide"
+          "Inter"
+          "Inter Tight"
         ];
       })
     ];
